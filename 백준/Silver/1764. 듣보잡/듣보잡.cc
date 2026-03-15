@@ -1,6 +1,5 @@
 #include <iostream>
 #include <set>
-#include <map>
 #include <string>
 using namespace std;
 
@@ -29,7 +28,5 @@ int main(){
 	for(iter = a.begin(); iter != a.end(); iter++){
 		cout << *iter << endl;
 	}
-	
-	
     return 0;
 }
