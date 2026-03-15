@@ -1,18 +1,45 @@
 #include <stdio.h>
+
 #include <string.h>
 
+
+
 int main(){
-    int T;
-    char word[1000];
-    char f, l;
-    scanf("%d", &T);
-    
-    for(int i = 0; i < T; i++){
-        scanf("%s", word);
-        int len = strlen(word);
-        f = word[0];
-        l = word[len-1];
-        
-        printf("%c%c\n", f, l);
-    }
+
+
+
+	char str[1000] = "\0";
+
+	char f, l;
+
+	int n, i, length = 0;
+
+	
+
+	scanf("%d", &n);
+
+	
+
+	for(i = 0; i < n; i++){
+
+		
+
+		scanf("%s", str);
+
+		length = strlen(str);
+
+		
+
+		f = str[0];
+
+		l = str[length - 1];
+
+		
+
+		printf("%c%c\n", f, l);
+
+	}
+
+	
+
 }
