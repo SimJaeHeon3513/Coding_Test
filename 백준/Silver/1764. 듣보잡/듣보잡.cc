@@ -5,32 +5,29 @@
 using namespace std;
 
 int main(){
+
     int n = 0, m = 0, count = 0;
+
     string name;
-	set<string> s;
-	set<string> a;
-	set<string>::iterator iter;
-    
+	map<string, int> M;
+    map<string, int>::iterator iter;
+
 	cin >> n >> m;
-    
-    for(int i = 0; i < n; i ++){
+
+    for(int i = 0; i < n + m; i ++){
         cin >> name;
-        s.insert(name);
+        M[name]++;
+        if(M[name] == 2){
+            count++;
+        }
     }
-    
-    for(int k = 0; k < m; k++){
-    	cin >> name;
-    	if(s.find(name) != s.end()){
-    		count++;
-    		a.insert(name);
-		}
-	}
-	
+
 	cout << count << endl;
-	for(iter = a.begin(); iter != a.end(); iter++){
-		cout << *iter << endl;
+
+	for(iter = M.begin(); iter != M.end(); iter++){
+	    if(iter -> second == 2){
+	        cout << iter -> first << endl;
+	    }
 	}
-	
-	
     return 0;
 }
