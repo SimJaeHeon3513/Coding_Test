@@ -1,7 +1,6 @@
 #include<iostream>
 #include<string>
 #include<map>
-#include<set>
 #include<cctype>
 using namespace std;
 
@@ -11,8 +10,8 @@ int main()
     cin.tie(NULL);
    int N = 0;
    int M = 0;
-   string name;
-   string dex[100001];
+   string tmp;
+   string dogam[100001];
    
    cin >> N >> M;
    
@@ -20,18 +19,18 @@ int main()
    
    for(int i = 0; i < N; i++)
    {
-      cin >> name;
-      m.insert(make_pair(name, i + 1));
-      dex[i + 1] = name;
+      cin >> tmp;
+      m.insert(make_pair(tmp, i + 1));
+      dogam[i + 1] = tmp;
    }
    
    for(int j = 0; j < M; j++){
-       cin >> name;
-       if(isdigit(name[0])){
-           cout << dex[stoi(name)] << "\n";
+       cin >> tmp;
+       if(isdigit(tmp[0])){
+           cout << dogam[stoi(tmp)] << "\n";
        }
        else{
-           cout << m.find(name)->second << "\n";
+           cout << m.find(tmp)->second << "\n";
         }
    }
 }
