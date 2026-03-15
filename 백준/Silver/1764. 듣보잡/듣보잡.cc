@@ -1,0 +1,36 @@
+#include <iostream>
+#include <set>
+#include <map>
+#include <string>
+using namespace std;
+
+int main(){
+    int n = 0, m = 0, count = 0;
+    string name;
+	set<string> s;
+	set<string> a;
+	set<string>::iterator iter;
+    
+	cin >> n >> m;
+    
+    for(int i = 0; i < n; i ++){
+        cin >> name;
+        s.insert(name);
+    }
+    
+    for(int k = 0; k < m; k++){
+    	cin >> name;
+    	if(s.find(name) != s.end()){
+    		count++;
+    		a.insert(name);
+		}
+	}
+	
+	cout << count << endl;
+	for(iter = a.begin(); iter != a.end(); iter++){
+		cout << *iter << endl;
+	}
+	
+	
+    return 0;
+}
